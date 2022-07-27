@@ -1,0 +1,5 @@
+-	ARCHITECTURE: I have followed MVVM architecture in order to split the business logic from the models so that the UI will be driven by the models 
+-	DESIGN PATTERN: I have followed Singleton design pattern so that object creation will be limited to one class but allowing the flexibility to create more objects incase of change in the situation
+-	READ-WRITE: Among the multiple available options, I choose NuggetPacket (LinqToCSV) instead of FileStreamReader which is typically use, since it contains CSV FileReader FileWriter. This approach would enable to process multiple file formats (CSV, TDV, PDV).
+-	SAVE: There are different types of SAVE mechanisms like database save, however I have used models and saved the data to FLAT files since the process would be faster and to avoid any database dependencies
+-	UNIT TESTING: I have followed NUNIT framework to create the unit test cases, and used MOQ to mock the view models
