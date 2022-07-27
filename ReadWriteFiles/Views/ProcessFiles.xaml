@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="ReadWriteFiles.Views.ProcessFiles"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ReadWriteFiles.ViewModels"              
+             xmlns:i1="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" Height="285" Width="452" Name="ReadWriteFiles">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center">
+            <TextBlock Width="50"/>
+            <Button x:Name="BtnProcess" Content="Process Input files" ToolTip="Click to Process Input files" HorizontalAlignment="Left"  VerticalAlignment="Top"
+                   Command="{Binding ProcessInputFilesCommand}">
+                <!--<i1:Interaction.Triggers>
+                    <i1:EventTrigger EventName="Click">
+                        <i1:ChangePropertyAction TargetObject="{Binding ElementName=BtnAaa}" PropertyName="IsEnabled" Value="True"/>
+                    </i1:EventTrigger>
+                </i1:Interaction.Triggers>-->
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
+            <TextBlock Width="50"/>
+            <Button x:Name="BtnAaa" Content="OMS Type - AAA"  ToolTip="Click to generate Type AAA file" VerticalAlignment="Top"    Command="{Binding ProcessOutputTypeAAACommand}"/>
+            <TextBlock Width="50"/>
+            <Button x:Name="BtnBbb" Content="OMS Type - BBB"  ToolTip="Click to generate Type BBB file" HorizontalAlignment="Left"  VerticalAlignment="Top"   Command="{Binding ProcessOutputTypeBBBCommand}"/>
+            <TextBlock Width="50"/>
+            <Button x:Name="BtnCcc" Content="OMS Type - CCC" ToolTip="Click to generate Type CCC file" HorizontalAlignment="Left"  VerticalAlignment="Top"   Command="{Binding ProcessOutputTypeCCCCommand}"/>
+        </StackPanel>
+
+
+    </Grid>
+</UserControl>
